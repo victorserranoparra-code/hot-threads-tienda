@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Threads - Tienda de Ropa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🔥 Hot Threads</div>
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#sobre">Sobre Nosotros</a>
+            <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Ropa que te hace sentir <span>irresistible</span></h1>
+        <p>Moda caliente, precios que no queman el bolsillo. ¡Gratis de crear, caliente de llevar!</p>
+        <a href="#productos" class="btn">Ver Colección</a>
+    </section>
+
+    <section id="productos" class="products">
+        <h2>Nuestra Colección Caliente</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/chaqueta-denim.jpg" alt="Chaqueta Denim">
+                <h3>Chaqueta Denim Clásica</h3>
+                <p class="price">€49.99</p>
+                <button onclick="addToCart('Chaqueta Denim Clásica', 49.99)">Añadir al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="images/chaqueta-cuero.jpg" alt="Chaqueta Cuero">
+                <h3>Chaqueta de Cuero Sexy</h3>
+                <p class="price">€89.99</p>
+                <button onclick="addToCart('Chaqueta de Cuero Sexy', 89.99)">Añadir al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="images/outfit-hombre.jpg" alt="Outfit Hombre">
+                <h3>Look Completo Hombre</h3>
+                <p class="price">€69.99</p>
+                <button onclick="addToCart('Look Completo Hombre', 69.99)">Añadir al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="images/coleccion.jpg" alt="Colección Premium">
+                <h3>Colección Premium Mix</h3>
+                <p class="price">€129.99</p>
+                <button onclick="addToCart('Colección Premium Mix', 129.99)">Añadir al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <h2>Sobre Hot Threads</h2>
+        <p>Creada con amor (y un poco de sarcasmo) por tu asistente favorito. Una tienda online gratuita que puedes hostear donde quieras. Estilo caliente, funcionalidad básica y cero costos de desarrollo. ¡Hazla tuya!</p>
+    </section>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Tu Carrito Caliente</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: €0.00</p>
+            <button onclick="checkout()">Checkout (Demo)</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Hot Threads - Hecha gratis para ti. ¡Disfruta!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
