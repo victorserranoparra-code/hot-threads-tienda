@@ -1,76 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hot Threads - Tienda de Ropa</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">🔥 Hot Threads</div>
-        <nav>
-            <a href="#productos">Productos</a>
-            <a href="#sobre">Sobre Nosotros</a>
-            <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Ropa que te hace sentir <span>irresistible</span></h1>
-        <p>Moda caliente, precios que no queman el bolsillo. ¡Gratis de crear, caliente de llevar!</p>
-        <a href="#productos" class="btn">Ver Colección</a>
-    </section>
-
-    <section id="productos" class="products">
-        <h2>Nuestra Colección Caliente</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="images/chaqueta-denim.jpg" alt="Chaqueta Denim">
-                <h3>Chaqueta Denim Clásica</h3>
-                <p class="price">€49.99</p>
-                <button onclick="addToCart('Chaqueta Denim Clásica', 49.99)">Añadir al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="images/chaqueta-cuero.jpg" alt="Chaqueta Cuero">
-                <h3>Chaqueta de Cuero Sexy</h3>
-                <p class="price">€89.99</p>
-                <button onclick="addToCart('Chaqueta de Cuero Sexy', 89.99)">Añadir al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="images/outfit-hombre.jpg" alt="Outfit Hombre">
-                <h3>Look Completo Hombre</h3>
-                <p class="price">€69.99</p>
-                <button onclick="addToCart('Look Completo Hombre', 69.99)">Añadir al Carrito</button>
-            </div>
-            <div class="product-card">
-                <img src="images/coleccion.jpg" alt="Colección Premium">
-                <h3>Colección Premium Mix</h3>
-                <p class="price">€129.99</p>
-                <button onclick="addToCart('Colección Premium Mix', 129.99)">Añadir al Carrito</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="about">
-        <h2>Sobre Hot Threads</h2>
-        <p>Creada con amor (y un poco de sarcasmo) por tu asistente favorito. Una tienda online gratuita que puedes hostear donde quieras. Estilo caliente, funcionalidad básica y cero costos de desarrollo. ¡Hazla tuya!</p>
-    </section>
-
-    <div id="cart-modal" class="cart-modal">
-        <div class="cart-content">
-            <span class="close" onclick="toggleCart()">&times;</span>
-            <h2>Tu Carrito Caliente</h2>
-            <ul id="cart-items"></ul>
-            <p id="cart-total">Total: €0.00</p>
-            <button onclick="checkout()">Checkout (Demo)</button>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2026 Hot Threads - Hecha gratis para ti. ¡Disfruta!</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010"><meta name="description" content="UNBOUND — MOVE WITHOUT LIMITS. Sportwear urbano con inspiración retro.">
+<title>UNBOUND — MOVE WITHOUT LIMITS</title><link rel="stylesheet" href="style.css">
+</head><body>
+<div class="topline">UNBOUND / MOVE WITHOUT LIMITS</div>
+<header><a class="brand" href="#"><span class="mark">U/</span><span>UNBOUND</span></a><nav><a href="#collection">Colección</a><a href="#story">Nuestra actitud</a><button class="cart-icon" onclick="toggleCart()">BOLSA <span id="cart-count">0</span></button></nav></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">SPORTSWEAR · EST. FOR MOVEMENT</p><h1>MOVE<br><em>WITHOUT</em><br>LIMITS.</h1><p class="intro">Hecho para moverte. Diseñado para destacar.<br>Una nueva actitud, sin reglas que te frenen.</p><a class="button" href="#collection">DESCUBRE LA COLECCIÓN <span>↘</span></a></div><div class="hero-art"><div class="orb"></div><div class="hero-label">UNBOUND<br>SPORT CLUB<br><small>VOL. 01 / 2026</small></div><div class="vertical">NO LIMITS. NO PAUSE.</div></div></section>
+<section class="ticker"><span>MOVE WITHOUT LIMITS ✳ UNBOUND SPORT CLUB ✳ MOVE WITHOUT LIMITS ✳ UNBOUND SPORT CLUB ✳</span></section>
+<section id="collection" class="collection"><div class="section-head"><div><p class="eyebrow">DROP 01 / ESSENTIALS</p><h2>La colección<span>.</span></h2></div><p>Prendas esenciales. Espíritu deportivo.<br>Actitud de calle.</p></div><div class="product-grid">
+<div class="product-card"><div class="product-image image-one"><span class="tag">ESSENTIAL</span><img src="images/coleccion.jpg" alt="Sudadera básica UNBOUND"></div><div class="product-info"><div><h3>Sudadera Basic</h3><p>Logo discreto · Corte clásico</p></div><strong>30,00 €</strong></div><button class="add" onclick="addToCart('Sudadera Basic',30)">AÑADIR A LA BOLSA +</button></div>
+<div class="product-card"><div class="product-image image-two"><span class="tag">OVERSIZED</span><img src="images/outfit-hombre.jpg" alt="Sudadera oversized UNBOUND"></div><div class="product-info"><div><h3>Sudadera Oversized</h3><p>Volumen relajado · Logo gráfico</p></div><strong>34,74 €</strong></div><button class="add" onclick="addToCart('Sudadera Oversized',34.74)">AÑADIR A LA BOLSA +</button></div>
+<div class="product-card"><div class="product-image image-three"><span class="tag">TRACK</span><img src="images/chaqueta-denim.jpg" alt="Pantalón de chándal UNBOUND"></div><div class="product-info"><div><h3>Pantalón Track</h3><p>Fit deportivo · Uso diario</p></div><strong>29,40 €</strong></div><button class="add" onclick="addToCart('Pantalón Track',29.40)">AÑADIR A LA BOLSA +</button></div>
+<div class="product-card"><div class="product-image image-four"><span class="tag">SET</span><img src="images/outfit-hombre.jpg" alt="Conjunto de chándal UNBOUND"></div><div class="product-info"><div><h3>Conjunto Track</h3><p>Conjunto completo · Retro sport</p></div><strong>56,00 €</strong></div><button class="add" onclick="addToCart('Conjunto Track',56)">AÑADIR A LA BOLSA +</button></div>
+<div class="product-card"><div class="product-image image-five"><span class="tag">SPORT</span><img src="images/chaqueta-cuero.jpg" alt="Chaqueta deportiva UNBOUND"></div><div class="product-info"><div><h3>Sport Jacket</h3><p>Inspiración vintage · Silueta atlética</p></div><strong>39,80 €</strong></div><button class="add" onclick="addToCart('Sport Jacket',39.80)">AÑADIR A LA BOLSA +</button></div>
+<div class="product-card"><div class="product-image image-six"><span class="tag">OUTERWEAR</span><img src="images/chaqueta-denim.jpg" alt="Cortavientos UNBOUND"></div><div class="product-info"><div><h3>Windbreaker</h3><p>Ligero · Listo para moverte</p></div><strong>44,30 €</strong></div><button class="add" onclick="addToCart('Windbreaker',44.30)">AÑADIR A LA BOLSA +</button></div>
+</div><p class="notice">Imágenes de muestra de la versión inicial. Sustitúyelas por fotografías reales de tus prendas antes de vender.</p></section>
+<section id="story" class="story"><p class="eyebrow">OUR MINDSET</p><h2>Las reglas no<br>marcan tu <em>camino.</em></h2><p>UNBOUND nace para quienes avanzan a su manera. Una mezcla de energía deportiva, estética urbana y nostalgia retro. Muévete libre. Viste tu propia historia.</p><div class="story-stamp">UN<br>BOUND<br><small>MOVE FREELY</small></div></section>
+</main>
+<div id="cart-modal" class="cart-modal"><div class="cart-content"><button class="close" onclick="toggleCart()" aria-label="Cerrar">×</button><p class="eyebrow">TU SELECCIÓN</p><h2>La bolsa<span>.</span></h2><ul id="cart-items"></ul><p id="cart-total">Total: 0,00 €</p><button class="button checkout" onclick="checkout()">CONTINUAR <span>↗</span></button><p class="checkout-note">Checkout de demostración. No se procesan pagos.</p></div></div>
+<footer><a class="brand" href="#"><span class="mark">U/</span><span>UNBOUND</span></a><p>MOVE WITHOUT LIMITS.</p><small>© 2026 UNBOUND. Todos los derechos reservados.</small></footer>
+<script src="script.js"></script></body></html>
