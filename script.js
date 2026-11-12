@@ -1,19 +1,39 @@
 let cart = [];
 
+const IMAGE_FILES = [
+  'chaqueta-track-paneles-gris-negro.jpg',
+  'chaqueta-track-paneles-gris-negro-alternativa.jpg',
+  'chaqueta-track-paneles-negros.jpg',
+  'chaqueta-track-detalle-pipa.jpg',
+  'chaqueta-track-panel-rojo-blanco.jpg',
+  'pantalon-track-detalle-pipa.jpg',
+  'sudadera-logo-central.jpg',
+  'hoodie-capucha-logo-central.jpg'
+];
+
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
 async function loadImages() {
-  const imgs = document.querySelectorAll('img[data-src]');
-  await Promise.all([...imgs].map(async (img) => {
+  try {
+    await Promise.all(IMAGE_FILES.map(f => loadScript('img-data/' + f + '.js')));
+  } catch (e) {
+    console.warn('Algunas imágenes no cargaron', e);
+  }
+  document.querySelectorAll('img[data-src]').forEach((img) => {
     const path = img.getAttribute('data-src');
-    const b64path = 'img-b64/' + path.replace('images/', '') + '.b64';
-    try {
-      const res = await fetch(b64path);
-      if (!res.ok) throw new Error('missing');
-      const b64 = (await res.text()).trim();
-      img.src = 'data:image/jpeg;base64,' + b64;
-    } catch (e) {
-      img.src = path;
+    const key = path.replace('images/', '');
+    if (window.UNBOUND_IMG && window.UNBOUND_IMG[key]) {
+      img.src = 'data:image/jpeg;base64,' + window.UNBOUND_IMG[key];
     }
-  }));
+  });
 }
 
 function addToCart(name, price) {
